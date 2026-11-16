@@ -115,7 +115,7 @@ export default function Navbar() {
             className="pointer-events-auto inline-flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-slate-950/90 hover:bg-blue-600 text-white backdrop-blur-xl border border-white/15 text-xs font-black shadow-xl transition-all active:scale-95"
           >
             {isOpen ? <X className="w-4 h-4" /> : <LayoutGrid className="w-4 h-4 text-amber-400" />}
-            <span>{isOpen ? 'Fermer le Menu' : 'Menu & Univers (19)'}</span>
+            <span>{isOpen ? 'Fermer le Menu' : 'Menu & Univers '}</span>
             <kbd className="hidden md:inline-block px-1.5 py-0.5 text-[10px] rounded bg-white/10 text-slate-300 font-mono">
               ⌘K
             </kbd>
@@ -130,7 +130,7 @@ export default function Navbar() {
             className="group flex items-center gap-3 px-6 py-3 rounded-full bg-slate-950/95 hover:bg-blue-600 text-white backdrop-blur-2xl border border-white/20 shadow-2xl hover:scale-105 transition-all"
           >
             <Sparkles className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition" />
-            <span className="text-xs font-black tracking-wide">Barre des Tâches (19 univers)</span>
+            <span className="text-xs font-black tracking-wide">Barre des Tâches Barre des Tâches</span>
             <ChevronUp className="w-4 h-4 text-slate-400 group-hover:-translate-y-0.5 transition" />
           </button>
         </div>

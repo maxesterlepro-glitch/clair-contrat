@@ -7,14 +7,15 @@ import { createBrowserClient } from '@supabase/ssr';
 import Navbar from '@/components/Navbar';
 import {
   ScanLine,
-  AlertOctagon,
-  TrendingUp,
   History,
   SearchCheck,
   Coins,
   CalendarClock,
-  Award,
-  Flame,
+  KeyRound,
+  GitCompare,
+  Vault,
+  Building,
+  Zap,
   Sparkles,
   ChevronRight,
   ShieldCheck,
@@ -87,10 +88,10 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 pb-24">
+    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 pb-28">
       <Navbar />
 
-      <main className="max-w-7xl mx-auto px-4 pt-8 space-y-8">
+      <main className="max-w-7xl mx-auto px-4 pt-6 space-y-8">
         {/* HERO BENTO SOMBRE PREMIUM */}
         <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-950 via-slate-900 to-blue-950 text-white p-8 sm:p-10 shadow-2xl">
           <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
@@ -145,11 +146,11 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        {/* GRILLE BENTO DES 6 UNIVERS */}
+        {/* GRILLE BENTO DES UNIVERS */}
         <div>
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-sm font-black uppercase tracking-wider text-slate-400">
-              Vos 6 super-pouvoirs ClairContrat
+              Vos outils ClairContrat
             </h2>
           </div>
 
@@ -213,7 +214,7 @@ export default function DashboardPage() {
                   </span>
                 </div>
                 <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                  Traquez vos abonnements dormants (salle de sport, assurance, box) et générez la résiliation sans frais en 1 clic.
+                  Traquez vos abonnements dormants et générez la résiliation sans frais en 1 clic.
                 </p>
               </div>
               <div className="mt-5 pt-3 border-t border-slate-100 text-xs font-extrabold text-purple-600">
@@ -240,43 +241,43 @@ export default function DashboardPage() {
             </Link>
 
             <Link
-              href="/mur"
-              className="group p-6 rounded-3xl bg-white border border-slate-200/90 hover:border-rose-600 shadow-sm hover:shadow-xl hover:shadow-rose-600/5 transition-all flex flex-col justify-between"
+              href="/caution"
+              className="group p-6 rounded-3xl bg-white border border-slate-200/90 hover:border-teal-600 shadow-sm hover:shadow-xl hover:shadow-teal-600/5 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                  <Award className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-2xl bg-teal-50 text-teal-600 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                  <KeyRound className="w-6 h-6" />
                 </div>
                 <div className="flex items-center justify-between">
-                  <h3 className="text-lg font-black">Le Mur de la Honte</h3>
-                  <span className="px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[10px] font-black">
-                    COMMUNAUTÉ
+                  <h3 className="text-lg font-black">Sauve-Caution & Pré-EDL</h3>
+                  <span className="px-2 py-0.5 rounded-full bg-teal-100 text-teal-800 text-[10px] font-black">
+                    IMMO
                   </span>
                 </div>
                 <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                  Découvrez les devis les plus lunaires postés par la communauté en France, votez et publiez vos propres pépites.
+                  Calculez la vétusté légale (Loi ALUR), contestez les retenues abusives et exigez les +10 % par mois de retard.
                 </p>
               </div>
-              <div className="mt-5 pt-3 border-t border-slate-100 text-xs font-extrabold text-rose-600">
-                Voir le classement des abus →
+              <div className="mt-5 pt-3 border-t border-slate-100 text-xs font-extrabold text-teal-600">
+                Protéger mon dépôt de garantie →
               </div>
             </Link>
 
             <Link
-              href="/dojo"
-              className="group p-6 rounded-3xl bg-white border border-slate-200/90 hover:border-orange-600 shadow-sm hover:shadow-xl hover:shadow-orange-600/5 transition-all flex flex-col justify-between"
+              href="/comparateur"
+              className="group p-6 rounded-3xl bg-white border border-slate-200/90 hover:border-violet-600 shadow-sm hover:shadow-xl hover:shadow-violet-600/5 transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                  <Flame className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-2xl bg-violet-50 text-violet-600 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+                  <GitCompare className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-black">Le Dojo de Négociation</h3>
+                <h3 className="text-lg font-black">Duel de Devis (A vs B)</h3>
                 <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                  Entraînez-vous en direct face à un propriétaire ou un garagiste de mauvaise foi jusqu&apos;au K.O. juridique.
+                  Opposés côte à côte : comparez deux devis et générez le message de mise en concurrence.
                 </p>
               </div>
-              <div className="mt-5 pt-3 border-t border-slate-100 text-xs font-extrabold text-orange-600">
-                Entrer dans l&apos;arène →
+              <div className="mt-5 pt-3 border-t border-slate-100 text-xs font-extrabold text-violet-600">
+                Comparer deux devis →
               </div>
             </Link>
           </div>
